@@ -81,7 +81,20 @@ export default function UKTrainTracker() {
     { destination: 'Reading', time: '14:45', platform: '2', duration: '22m' },
     { destination: 'Cardiff Central', time: '15:00', platform: '7', duration: '2h 15m' },
     { destination: 'Bath Spa', time: '15:15', platform: '4', duration: '1h 28m' },
-    { destination: 'Oxford', time: '15:30', platform: '3', duration: '1h 2m' }
+    { destination: 'Oxford', time: '15:30', platform: '3', duration: '1h 2m' },
+    { destination: 'Swindon', time: '15:45', platform: '1', duration: '55m' },
+    { destination: 'Newport', time: '16:00', platform: '6', duration: '1h 52m' },
+    { destination: 'Gloucester', time: '16:15', platform: '8', duration: '1h 38m' },
+    { destination: 'Exeter St Davids', time: '16:30', platform: '9', duration: '2h 35m' },
+    { destination: 'Plymouth', time: '16:45', platform: '10', duration: '3h 22m' },
+    { destination: 'Cheltenham Spa', time: '17:00', platform: '3', duration: '1h 55m' },
+    { destination: 'Worcester Foregate Street', time: '17:15', platform: '2', duration: '1h 42m' },
+    { destination: 'Birmingham New Street', time: '17:30', platform: '4', duration: '1h 28m' },
+    { destination: 'Hereford', time: '17:45', platform: '7', duration: '2h 18m' },
+    { destination: 'Swansea', time: '18:00', platform: '11', duration: '2h 45m' },
+    { destination: 'Penzance', time: '18:15', platform: '12', duration: '4h 35m' },
+    { destination: 'Taunton', time: '18:30', platform: '5', duration: '1h 58m' },
+    { destination: 'Bridgwater', time: '18:45', platform: '6', duration: '2h 12m' }
   ]);
 
   const [settings, setSettings] = useState({
