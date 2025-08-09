@@ -42,6 +42,7 @@ uk-train-tracker/
 ├── App.js (main application file)
 ├── package.json (dependencies)
 ├── app.json (Expo configuration)
+├── .gitignore (version control exclusions)
 └── assets/ (icons, splash screens)
 ```
 
