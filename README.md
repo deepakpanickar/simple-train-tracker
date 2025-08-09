@@ -1,13 +1,15 @@
 # Once you have cloned the repo, run the following to start the expo application 
 
+```bash
 # Uninstall old global expo-cli and install a new if not already done
 npm uninstall -g expo-cli
 npm install -g @expo/cli
 
+# Install dependencies
 npx expo install @expo/vector-icons expo-haptics
 
 npm install
-
+```
 
 
 # 🚂 UK Train Tracker - React Native/Expo App
