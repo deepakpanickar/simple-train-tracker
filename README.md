@@ -1,3 +1,16 @@
+# Once you have cloned the repo, run the following to start the expo application 
+
+
+# Uninstall old global expo-cli and install a new if not already done
+npm uninstall -g expo-cli
+npm install -g @expo/cli
+
+npx expo install @expo/vector-icons expo-haptics
+
+npm install
+
+
+
 # 🚂 UK Train Tracker - React Native/Expo App
 
 A comprehensive mobile train tracking application built with React Native and Expo, featuring real-time train progress, route management, and native mobile interactions.
