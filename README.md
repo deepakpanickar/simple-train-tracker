@@ -1,4 +1,6 @@
-# Once you have cloned the repo, run the following to start the expo application 
+# 🚀 Quick Start Guide
+
+Once you have cloned the repo, run the following to start the expo application:
 
 ```bash
 # Uninstall old global expo-cli and install a new if not already done
@@ -6,9 +8,13 @@ npm uninstall -g expo-cli
 npm install -g @expo/cli
 
 # Install dependencies
+npm install
 npx expo install @expo/vector-icons expo-haptics
 
-npm install
+# Start the development server
+npx expo start
+
+# Scan QR code with Expo Go app on your device
 ```
 
 
@@ -42,10 +48,12 @@ uk-train-tracker/
 ### **Dependencies**
 ```json
 {
-  "expo": "~49.0.15",
-  "react-native": "0.72.6",
-  "@expo/vector-icons": "^13.0.0",
-  "expo-haptics": "~12.4.0"
+  "expo": "~53.0.20",
+  "react": "19.0.0",
+  "react-native": "0.79.5",
+  "@expo/vector-icons": "^14.1.0",
+  "expo-haptics": "~14.1.4",
+  "expo-notifications": "~0.31.4"
 }
 ```
 
@@ -151,9 +159,11 @@ selectedRoute = {
 
 **Features**:
 - **Station Selector**: Currently fixed to "London Paddington"
-- **Train List**: Available departures with platform and duration
+- **Extended Train List**: 18 available departures with platform and duration
+- **Scrollable Interface**: Full scrollable list of UK destinations
 - **Add Functionality**: Tap ADD button to include in tracked routes
-- **Smart Navigation**: Automatically navigates to routes screen with highlighting
+- **Smart Navigation**: Automatically navigates to routes screen
+- **New Routes at Top**: Recently added routes appear at the top of the list
 
 **Train Data Structure**:
 ```javascript
@@ -208,8 +218,8 @@ Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
 ```
 
 ### **Animation System**
-- **Pulsing Current Station**: Continuous scale animation (1.0 → 1.2 → 1.0)
-- **Route Highlighting**: Color interpolation with automatic fadeout
+- **Pulsing Current Station**: Continuous scale animation (1.0 → 1.2 → 1.0) on tracker screen
+- **Optimized Performance**: Simplified animation system for React stability
 - **Button Feedback**: `activeOpacity` for touch response
 - **Toggle Switches**: Transform animations for smooth sliding
 
@@ -319,10 +329,11 @@ eas submit --platform android
 ## 🐛 **Known Issues & Solutions**
 
 ### **Resolved Issues**
-- ✅ **Status Bar Overlap**: Fixed with proper SafeAreaView and padding
-- ✅ **Tacky Popups**: Replaced with smooth highlighting system
+- ✅ **Status Bar Overlap**: Fixed with proper SafeAreaView and padding  
+- ✅ **JSX Syntax Errors**: Fixed malformed JSX elements and component structure
+- ✅ **React Render Cycle Conflicts**: Resolved useInsertionEffect warnings
+- ✅ **Animation Performance**: Simplified animation system for stability
 - ✅ **File Limit Errors**: Resolved by using clean Expo template
-- ✅ **Animation Performance**: Optimized with native driver where possible
 
 ### **Current Limitations**
 - **Static Data**: Currently uses mock data instead of real train API
@@ -366,14 +377,15 @@ npx expo start
 
 ### **Before Each Release**
 - [ ] All 4 screens render correctly
-- [ ] Bottom navigation works on all screens
-- [ ] Route addition flow works (Add → Routes with highlighting)
-- [ ] Station progress animations work smoothly
+- [ ] Bottom navigation works on all screens  
+- [ ] Route addition flow works (Add → Routes, new routes at top)
+- [ ] Station progress animations work smoothly (tracker screen)
 - [ ] Haptic feedback triggers on interactions
 - [ ] Status bar doesn't overlap content
 - [ ] App works on both iOS and Android
-- [ ] No console errors or warnings
-- [ ] Smooth performance on older devices
+- [ ] No console errors or React warnings
+- [ ] Smooth performance with 8+ routes
+- [ ] Scrollable add screen with 18 train options
 
 ### **User Experience Verification**
 - [ ] Intuitive navigation flow
@@ -407,6 +419,13 @@ npx expo start
 
 *This README serves as a complete project handoff document. Use it to continue development in new conversations or to onboard new developers to the project.*
 
-**Last Updated**: [Current Date]
-**Version**: 2.1.0
+**Last Updated**: December 2024  
+**Version**: 2.1.1
 **Status**: Production Ready ✅
+
+### **Recent Updates (v2.1.1)**
+- ✅ **Fixed React Render Conflicts**: Resolved useInsertionEffect warnings
+- ✅ **Enhanced Add Screen**: 18 train destinations with full scrolling
+- ✅ **Improved Route Management**: New routes appear at top of list  
+- ✅ **Optimized Performance**: Simplified animations for stability
+- ✅ **Updated Dependencies**: Latest Expo SDK 53 and React 19
