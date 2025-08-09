@@ -1,6 +1,5 @@
 # Once you have cloned the repo, run the following to start the expo application 
 
-
 # Uninstall old global expo-cli and install a new if not already done
 npm uninstall -g expo-cli
 npm install -g @expo/cli
