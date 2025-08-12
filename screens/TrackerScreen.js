@@ -24,6 +24,7 @@ export default function TrackerScreen({ selectedRoute, pulseAnim }) {
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled">
+      {/* Header remains generous */}
       <View style={styles.header}>
         <View style={styles.headerContent}>
           <View style={styles.headerIcon}>
@@ -33,7 +34,8 @@ export default function TrackerScreen({ selectedRoute, pulseAnim }) {
         </View>
       </View>
 
-      <View style={[styles.cardContainer, { marginTop: 8 }]}>
+      {/* Journey card (keep header->card spacing) */}
+      <View style={[styles.cardContainer, { marginTop: 8, marginBottom: 8 /* tighten gap to progress */ }]}>
         <View style={styles.journeyCard}>
           <View style={styles.journeyHeader}>
             <View style={styles.stationInfo}>
@@ -57,7 +59,8 @@ export default function TrackerScreen({ selectedRoute, pulseAnim }) {
         </View>
       </View>
 
-      <View style={styles.cardContainer}>
+      {/* Progress card (slightly closer to journey card) */}
+      <View style={[styles.cardContainer, { marginTop: 4 }]}>
         <View style={styles.progressCard}>
           <View style={styles.progressHeader}>
             <Text style={styles.progressTitle}>Journey Progress</Text>
